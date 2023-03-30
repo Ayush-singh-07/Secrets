@@ -86,7 +86,7 @@ passport.serializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets"
+    callbackURL: "https://secrets-4xf0.onrender.com/auth/google/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     // console.log(profile);  //client-user profile
@@ -100,7 +100,7 @@ passport.use(new GoogleStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/github/secrets"
+    callbackURL: "https://secrets-4xf0.onrender.com/auth/github/secrets"
   },
   function(accessToken, refreshToken, profile, done) {
     //console.log(profile);  //client-user profile
